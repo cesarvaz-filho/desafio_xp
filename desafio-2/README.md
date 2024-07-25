@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+#1 - Considerando que essa chamada realmente fosse para uma API real, o trecho 
+'fetch('https://api.example.com/data [api.example.com]')' tem um espaço desnecessário antes do colchete. 
+Essa notação é usada quando se quer pegar um item de um array pela posição.
+#2 - Os itens 'item.id [item.id]' e 'item.name [item.name]' não precisam buscar pela posição usando a notação de colchete.
+Para chegar a esta conclusão eu criei um array dados fake que continha os pares de chave-valor 'id' e 'name'.
+```
+const dadosFake = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+  { id: 4, name: 'Item 4' },
+  { id: 5, name: 'Item 5' },
+];
+```
+Em seguida, passei o array como valor da variável 'informação' para verificar se a lista seria atualizada.
+Como a API de exemplo não retorna dados, será lançado erro na função fetch e a variável 'informação' ficará vazia.
+```
+const fetchDataAsync = async () => {
+  try {
+    const informacao = dadosFake;
+    setInformacao(dadosFake);
+    setIsLoading(false);
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+};
+```
+Para melhorar legibilidade e manutenção do código, fiz as ações abaixo:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#1 - Todo o código precisou ser indentado para ficar explícito a relação de hierarquia do código.
+#2 - Separei a lógica do fetch em uma função chamada fetchData que realiza a chamada a API e retorna uma promessa. 
+Isso torna o código mais legível e fácil de manter.
+#3 - A função fetchData foi chamada no useEffect, que é responsável por chamar a função.
+#4 - Usei async/await em vez de then/catch. O uso de async/await torna o código mais legível e fácil de entender. 
+#5 - Usei o bloco try/catch para lidar com erros de forma mais explícita.
+#6 - Usei a constante API_URL para armazenar o link da API. Definir constantes para URLs e outros valores que não mudam, 
+torna o código mais legível e fácil de manter.
+#7 - Usei JSX mais conciso para tornar o código mais legível.
+#8 - Usei o padrão de naming convention camelCase para variáveis e mantive o PascalCase para o componente App. 
+Se fosse criar mais componentes manteria o PascalCase para estes elementos.
+#9 - Adicionei comentarios para explicar o que o código faz e como funciona. Isso tornará o código mais legível e fácil de manter.
+#10 - Usei o ESLint para garantir que o código siga um padrão consistente e esteja formatado corretamente.
+*/
