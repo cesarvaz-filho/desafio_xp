@@ -58,5 +58,10 @@ const fetchDataAsync = async () => {
  - [Documentação Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Documentação React](https://react.dev/)
 
+## Executar o projeto
+  Para rodar o proejeto, acesse a pasta raiz do desafio e execute.
 
+```
+npm start
+```
 
