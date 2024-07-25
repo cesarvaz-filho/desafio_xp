@@ -1,4 +1,9 @@
-#1 - Considerando que essa chamada realmente fosse para uma API real, o trecho 
+##Refrências
+Para fazer o projeto usei a documentação do React.js e ví vídeos no Youtube e página de fóruns.
+
+
+
+1 - Considerando que essa chamada realmente fosse para uma API real, o trecho 
 'fetch('https://api.example.com/data [api.example.com]')' tem um espaço desnecessário antes do colchete. 
 Essa notação é usada quando se quer pegar um item de um array pela posição.
 #2 - Os itens 'item.id [item.id]' e 'item.name [item.name]' não precisam buscar pela posição usando a notação de colchete.
