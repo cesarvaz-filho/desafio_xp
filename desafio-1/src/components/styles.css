@@ -1,0 +1,72 @@
+#container {
+  width: 300px;
+  margin: auto;
+  margin-top: 200px;
+  text-align: center;
+  border-style: solid;
+  border-radius: 0.2px;
+  border-color: rgb(9, 45, 112);
+}
+
+#valor_real {
+  display: flex;
+  margin: 10px;
+}
+
+#moeda {
+  display: flex;
+  margin: 10px;
+}
+
+#resultado {
+  display: flex;
+  margin: 10px;
+}
+
+#data {
+  display: flex;
+  margin: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+button[type="submit"] {
+  background-color: rgb(9, 45, 112);
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 95%;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(4, 30, 77);
+}
+
+input[disabled] {
+  background-color: #eee;
+  color: #666;
+}
+
+p {
+  color: red;
+  margin-top: 5px;
+}
