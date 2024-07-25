@@ -2,7 +2,7 @@
 
 
 
-## Available Scripts
+## Scripts disponíveis
 
 Para rodar, acesse o diretório raiz e execute:
 
@@ -11,11 +11,11 @@ Para rodar, acesse o diretório raiz e execute:
 Roda o app em mode de desenvolvimento.
 Open [http://localhost:3000](http://localhost:3000) no navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para testar, execute:
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Roda os testes no terminal.
+
+Eu escrevi alguns testes, mas não cheguei a concluir. Ainda estão falhando.
 
