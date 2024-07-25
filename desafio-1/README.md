@@ -19,3 +19,5 @@ Roda os testes no terminal.
 
 Eu escrevi alguns testes, mas não cheguei a concluir. Ainda estão falhando.
 
+##Refrências
+Para fazer o projeto usei a documentação do React.js, Axios e assisti vídeos no Youtube.
